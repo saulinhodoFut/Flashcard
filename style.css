@@ -1,71 +1,86 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    margin:0;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-    text-align:center;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('img/anupam-raisim-kerketta-2RUSOSHt7wQ-unsplash.svg');  
 }
 
-.flashcard{
-    width:320px;
-    height:200px;
-    margin:20px auto;
-    perspective:1000px;
-    cursor:pointer;
-    position:relative;
+.cabecalho {
+  background-color: #7e3e1c;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
 }
 
-.front,
-.back{
-    position:absolute;
-    width:100%;
-    height:100%;
-    border-radius:12px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:22px;
-    font-weight:bold;
-    backface-visibility:hidden;
-    transition:transform .6s;
-    box-shadow:0 5px 10px rgba(0,0,0,.2);
+.cabecalho-link {
+  color: #fff;
+  text-decoration: none;
 }
 
-.front{
-    background:#4CAF50;
-    color:white;
+h1 {
+  color: #fff;
+  font-size: 24px;
 }
 
-.back{
-    background:#2196F3;
-    color:white;
-    transform:rotateY(180deg);
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-.flashcard.flip .front{
-    transform:rotateY(180deg);
+.cartao {
+    width: 260px;
+    height: 200px;
+   
 }
 
-.flashcard.flip .back{
-    transform:rotateY(360deg);
+.cartao-imagem {
+    width: 100%;
 }
 
-button{
-    padding:10px 20px;
-    font-size:16px;
-    border:none;
-    border-radius:8px;
-    background:#333;
-    color:white;
-    cursor:pointer;
+.cartao-interno {
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;  
 }
 
-button:hover{
-    background:#555;
+.cartao-frente,
+.cartao-verso {
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  backface-visibility: hidden;
+}
+
+.cartao:hover .cartao-interno {
+  transform: rotateY(180deg);
+}
+
+.cartao-verso {
+  transform: rotateY(180deg);
+}
+
+section {
+  display: flex;
+  padding: 20px;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+ 
+}
+
+footer {
+  background-color: #7e3e1c;
+  padding: 15px 25px;
+  color: #fff;
 }
