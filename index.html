@@ -1,39 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
     <link rel="stylesheet" href="style.css">
-    <title>Flashcard</title>
 </head>
-
 <body>
-    <header class="cabecalho">
-        <h1>Confere Aí</h1>
-        <nav>
-            <a href="#" class="cabecalho-link">Inicio</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Descubra a verdade passando o mouse</h2>
-        <article class="cartao">
-            <div class="cartao-interno">
-                <div class="cartao-frente">
-                    <img src="img/photo-1781727966011-594bb0e1363e.avif" alt="pessoas jogando bola" class="cartao-imagem">
-                    <p>crianças e adolecntes tem preferencia no futebol!</p>
-                </div>
-                <div class="cartao-verso">
-                    <img src="img/photo-1780789594812-7828eae1ea07.avif" alt="paisagem" class="cartao-imagem">
-                    <p>pessoas que viajam são mais alegres</p>
-                </div>
-            </div>
-        </article>
-    </main>
-    <footer>
-        <p>Projeto feito por saulo
-    </footer>
-    <script src="script.js"></script>
-</body>
 
+<div class="container">
+    <h1>Flashcards</h1>
+
+    <div class="flashcard" id="card">
+        <div class="front" id="question"></div>
+        <div class="back" id="answer"></div>
+    </div>
+
+    <button onclick="nextCard()">Próximo</button>
+</div>
+
+<script src="script.js"></script>
+</body>
 </html>
